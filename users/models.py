@@ -5,6 +5,7 @@ from core.models import AbstractBaseModel
 from users.enums import UserRoles
 from users.managers import UserManager
 
+
 class User(AbstractUser, AbstractBaseModel):
     email = models.EmailField(max_length=255, unique=True)
     first_name = models.CharField(max_length=255)
